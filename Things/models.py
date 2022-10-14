@@ -1,14 +1,16 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.core import validators
 
 # Create your models here.
-class Thing(AbstractUser):
+class Thing(models.Model):
     name = models.CharField(
-        max_length = 50, blank = False
+        unique = True, max_length = 30
     )
 
-    description = models.CharField(
-        max_length = 520, blank = False
+    description = models.TextField(
+        max_length = 120, blank = True
     )
 
-    quantity = models.IntegerField()
+    quantity = models.IntegerField(
+        validators = [validators.MinValueValidator(0), validators.MaxValueValidator(100)]
+    )
