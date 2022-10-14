@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'things'
+    'Things'
 ]
 
 MIDDLEWARE = [
@@ -127,4 +127,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 ## User model for authentication purposes
-AUTH_USER_MODEL = 'things.Thing'
+AUTH_USER_MODEL = 'Things.Thing'
