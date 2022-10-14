@@ -4,7 +4,7 @@ from django.core import validators
 # Create your models here.
 class Thing(models.Model):
     name = models.CharField(
-        unique = True, max_length = 30
+        unique = True, max_length = 30, blank = False
     )
 
     description = models.TextField(
